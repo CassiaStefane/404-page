@@ -1,0 +1,87 @@
+:root{
+    --dark:#00008B;
+    --neon:#8ff1f5;
+}
+html {
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--dark);
+    color: white; 
+    padding: 2em;
+}
+a{
+    font-size: 1.6em;
+    color: var(--neon);
+    text-decoration: none;
+    margin: 20px;
+    border: var(--neon) 2px solid;
+    padding: 0.25em 1.2em;
+    border-radius: 00.25em;
+    text-shadow: 0 0 0.25em hsla(0, 0%, 100%, 0.5), 0 0 0.5em var(--neon);
+    box-shadow: inset 0 0 0.5em var(--neon), 0 0 0.5em var(--neon);
+    position: relative;
+}
+.button::before{
+    content: "";
+    position: absolute;
+    background-color: var(--neon);
+    top: 250%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(2em) rotateX(20deg) scale(1, 0.35);
+    filter: blur(2em);
+}
+nav a{
+    font-size: 1.25em;
+    box-shadow: inset 0 0 0.25em var(--neon), 0 0 1.0em var(--neon)
+}
+.conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+}
+.main{
+    width: 100%;
+    margin: 40px;
+}
+img{
+    width: 80%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+h4{
+    font-size: 1.025em;
+    margin: 30px 0;
+}
+h3{
+    font-size: 2em;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 90px;
+}
+@media screen and (max-width:700px){
+    a {
+        margin: 0;
+    }
+    .main{
+        white-space: nowrap;
+    }
+}
