@@ -54,7 +54,10 @@ a:hover{
     justify-content: space-between;
 }
 .close{
-    opacity: 0;
+    display: none;
+}
+#menuzinho{
+    display: none;
 }
 main{
     display: flex;
@@ -100,7 +103,7 @@ footer{
     .bar{
         position: fixed;
         left: 0;
-        top: 0;
+        top: -130%;
         background-color: var(--light);
         width: 100%;
         padding: 3rem;
@@ -116,12 +119,27 @@ footer{
         box-shadow: none;
         border: none;
     }
-    .close{
+    #close{
+        display: block;
         opacity: 1;
-        position: relative;
+        position: absolute;
+        cursor: pointer;
+        top: 10px;
     }
     .bar a:hover{
         color: var(--midle);
         background-color: var(--light);
+    }
+    #menuzinho{
+        display: block;
+        cursor: pointer;
+    }
+    .show{
+        top: 0;
+    }
+}
+@media screen and (max-width:400px){
+    img{
+        display: none;
     }
 }
