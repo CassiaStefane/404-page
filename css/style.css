@@ -15,7 +15,7 @@ html {
 body{
     background-color: var(--dark);
     color: white; 
-    padding: 2em;
+    padding: 3%;
 }
 a{
     font-size: 1.6em;
@@ -78,6 +78,13 @@ img{
     justify-content: flex-end;
     filter: brightness(80%);
 }
+#ghostOne{
+    max-width: 80px;
+    visibility: hidden;
+    margin: 0 50px 15px ;
+    display: flex;
+}
+
 li {
     list-style-type: none;
   }
@@ -138,8 +145,11 @@ footer{
         top: 0;
     }
 }
-@media screen and (max-width:400px){
-    img{
-        display: none;
+@media screen and (max-width:450px){
+    #ghostTwo{
+        visibility: hidden;
+    }
+    #ghostOne{
+        visibility: visible;
     }
 }
