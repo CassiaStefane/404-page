@@ -15,7 +15,7 @@ html {
 body{
     background-color: var(--dark);
     color: white; 
-    padding: 3%;
+    padding: 2em;
 }
 a{
     font-size: 1.6em;
@@ -63,13 +63,15 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin: 40px 0;
 }
 .main{
     width: 100%;
     margin: 40px;
     white-space: nowrap;
+    align-items: center;
+    margin: 5%;
+
+
 }
 img{
     width: 80%;
@@ -78,13 +80,6 @@ img{
     justify-content: flex-end;
     filter: brightness(80%);
 }
-#ghostOne{
-    max-width: 80px;
-    visibility: hidden;
-    margin: 0 50px 15px ;
-    display: flex;
-}
-
 li {
     list-style-type: none;
   }
@@ -105,12 +100,16 @@ footer{
     a {
         margin: 0;
     }
+    img{
+        margin-top: 3rem;
+        min-width: 100px;
+    }
 }
 @media screen and (max-width:500px) {
     .bar{
         position: fixed;
         left: 0;
-        top: -130%;
+        top: -200px;
         background-color: var(--light);
         width: 100%;
         padding: 3rem;
@@ -146,10 +145,13 @@ footer{
     }
 }
 @media screen and (max-width:450px){
-    #ghostTwo{
-        visibility: hidden;
-    }
-    #ghostOne{
-        visibility: visible;
-    }
+   main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+   }
+   #ghost{
+    min-width: 100px;
+    margin: 40px;
+   }
 }
