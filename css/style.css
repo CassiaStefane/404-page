@@ -1,5 +1,5 @@
 :root{
-    --dark:#060629;
+    --dark:#000000;
     --neon:#8ff1f5;
     --light: #a7c8ef;
     --midle: rgb(68, 108, 181);
@@ -74,11 +74,13 @@ main{
 
 }
 img{
-    width: 80%;
+    max-width: 70%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     filter: brightness(80%);
+    margin-top: 50px;
+    animation: ghost 2s infinite alternate;
 }
 li {
     list-style-type: none;
@@ -95,6 +97,14 @@ footer{
     flex-direction: row;
     justify-content: center;
     margin-top: 90px;
+}
+@keyframes ghost {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(20px);
+    }
 }
 @media screen and (max-width:768px){
     a {
@@ -143,6 +153,9 @@ footer{
     .show{
         top: 0;
     }
+    img{
+        margin-top: 9rem;
+    }
 }
 @media screen and (max-width:450px){
    main{
@@ -150,8 +163,8 @@ footer{
     flex-direction: column;
     margin-left: 3%;
    }
-   #ghost{
-    min-width: 100px;
-    margin: 40px;
+   img{
+    max-width: 150px;
+    margin-top: 5.5rem;
    }
 }
